@@ -1,25 +1,23 @@
 <script>
-    import Color from '$lib/Color.svelte';
-    let colorName = 'Pink';
+    export let color;
 </script>
 
-<div>
-    <h1 class="text-primary">Play with Colors</h1>
-</div>
-
-<div>
-    <input bind:value={colorName} />
-    <Color color={colorName} />
+<div style="background:{color}">
+    <p>Color : {color}</p>
 </div>
 
 <style>
-    input {
-   	 padding: 0.5em;
-   	 text-align: center;
-    }
     div {
+   	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+   	 padding: 0.5em;
+   	 width: 120px;
+   	 margin: 0.5em auto;
+   	 border-radius: 5px;
    	 text-align: center;
-   	 margin: 3em auto;
+   	 font-weight: bold;
+    }
+    p {
+   	 margin: 0;
     }
 </style>
 
